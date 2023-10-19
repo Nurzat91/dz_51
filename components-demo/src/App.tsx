@@ -15,17 +15,38 @@ function App() {
         {numbers: 32},
     ]);
 
+    function getRandomNumbers(min: number, max: number, count: number): number[] {
+        if (max - min + 1 < count) {
+            throw new Error('Error' +  Error);
+        }
+
+        const numbers: number[] = [];
+
+        while (numbers.length < count) {
+            const randomNum = Math.floor(Math.random() * (max - min + 1)) + min;
+            if (!numbers.includes(randomNum)) {
+                numbers.push(randomNum);
+            }
+        }
+
+        return numbers.sort((a, b) => a - b);
+    }
+
+    const minNum = 5;
+    const maxNum = 36;
+    const count = 5;
+
+    const randomNumbers = getRandomNumbers(minNum, maxNum, count);
 
     const changeName = () =>{
         setnum([
-            {numbers: 7},
-            {numbers: 11},
-            {numbers: 11},
-            {numbers: 11},
-            {numbers: 11},
+            {numbers: randomNumbers[0]},
+            {numbers: randomNumbers[1]},
+            {numbers: randomNumbers[2]},
+            {numbers: randomNumbers[3]},
+            {numbers: randomNumbers[4]},
         ]);
     };
-
 
     return (
     <div className="App">
