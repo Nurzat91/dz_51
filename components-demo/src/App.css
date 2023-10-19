@@ -5,3 +5,27 @@
   text-align: center;
 }
 
+.App {
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 15px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.TaskBlock {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.task {
+  border: 1px solid green;
+  margin: 10px;
+  border-radius: 30px;
+  width: 40px;
+  height: 40px;
+  line-height: 2;
+}

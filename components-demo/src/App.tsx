@@ -54,11 +54,13 @@ function App() {
             <button onClick={changeName}>New numbers</button>
         </div>
 
-        <Task numbers={num[0].numbers}/>
-        <Task numbers={num[1].numbers}/>
-        <Task numbers={num[2].numbers}/>
-        <Task numbers={num[3].numbers}/>
-        <Task numbers={num[4].numbers}/>
+        <div className="TaskBlock">
+            <Task numbers={num[0].numbers}/>
+            <Task numbers={num[1].numbers}/>
+            <Task numbers={num[2].numbers}/>
+            <Task numbers={num[3].numbers}/>
+            <Task numbers={num[4].numbers}/>
+        </div>
     </div>
   )
 }
